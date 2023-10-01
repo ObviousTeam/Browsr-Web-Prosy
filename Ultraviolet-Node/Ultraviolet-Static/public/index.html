@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Browser</title>
+    <link id="css-link" rel="stylesheet" type="text/css" href="">
+  </head>
+  <body class="content">
+    <div class="overlay" id="overlay">
+      <button class="hidden" id="closethank" onclick="didnothank()">X</button>
+      <h3 class="hidden" style="top:40%;" id="thanktext">We Hope You Like Our Website</h3>
+      <button id="thankButton" class="hidden" onclick="thankDeveloper()">Thank the Developer</button>
+      <button type="submit" name="submit" value="Submit" id="thankButton" class="hidden" onclick="thankDeveloper()">Thank the Developer</button>
+      <h5 class="hidden" style="top:55%;" id="nametext">An Oz Abramovich Production</h5>
+    </div>
+    <div class="tabs" id="tabList">
+      <button onclick="createNewTab()">New Tab</button>
+    </div>
+    <div class="button-container">
+      <button onclick="goBack()">←</button>
+      <button onclick="goForward()">→</button>
+      <button onclick="reload()">⟳</button>
+      <div class="url-bar">
+        <div class="icon-and-search-container">
+          <span class="lock-icon" id="lock-icon"></span>
+          <input type="text" id="searchBar" placeholder="Search and press Enter">
+        </div>
+      </div>
+      <button onclick="settings()">⛭</button>
+    </div>
+    <div class="iframes" id="iframelist"></div>
+    <script src="uv/uv.bundle.js" defer></script>
+    <script src="uv/uv.config.js" defer></script>
+    <script src="register-sw.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="index.js" defer></script>
+    <script src="scripts/decrypturl.js"></script>
+    <script src="scripts/getfromiframe.js"></script>
+    <script src="scripts/searchhistory.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/thanks.js"></script>
+  </body>
+</html>

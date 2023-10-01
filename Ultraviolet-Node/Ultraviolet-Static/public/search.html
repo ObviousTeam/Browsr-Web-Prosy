@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link id="css-link" rel="stylesheet" type="text/css" href="">
+  <link rel="stylesheet" href="style/settings/search.css">
+  <title>Search History</title>
+</head>
+<body>
+  <header>
+    <div class="tabs">
+      <div class="tab" id="allTab">All</div>
+      <div class="tab" id="todayTab">Today</div>
+      <div class="tab" id="yesterdayTab">Yesterday</div>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="searchBar" placeholder="Search history...">
+    </div>
+  </header>
+  <main>
+    <div id="searchHistoryItems"></div>
+  </main>
+  <footer>
+    <!-- Pagination or additional controls can go here if needed -->
+  </footer>
+</body>
+  <script src="scripts/settings.js"></script>
+  <script src="scripts/searchhistory.js"></script>
+  <script>
+    // Add a click event listener to each tab
+document.querySelectorAll(".tab").forEach(tab => {
+  tab.addEventListener("click", function () {
+    // Remove the "active" class from all tabs
+    document.querySelectorAll(".tab").forEach(t => {
+      t.classList.remove("active");
+    });
+
+    // Add the "active" class to the clicked tab
+    this.classList.add("active");
+
+    // Update the search history based on the selected tab (you can add logic here)
+    // For now, let's call the displaySearchHistory function
+    displaySearchHistory();
+    filterSearchHistory()
+    filterSearchHistoryDate()
+  });
+});
+
+const searchBar = document.getElementById("searchBar");
+searchBar.addEventListener("input", filterSearchHistory);
+
+displaySearchHistory();
+
+  </script>
+</html>

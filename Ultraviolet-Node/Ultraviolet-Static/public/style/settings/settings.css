@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .settings-container {
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .setting-option {
+    margin-bottom: 20px;
+  }
+  
+  .setting-option label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .custom-select {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: #222;
+    border-radius: 5px;
+    padding: 8px 10px;
+    color: #fff;
+    border: none;
+    appearance: none;
+  }
+  
+  .custom-select:focus {
+    outline: none;
+  }
+  
+  .custom-select::before {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }

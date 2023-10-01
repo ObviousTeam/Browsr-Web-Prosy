@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link id="css-link" rel="stylesheet" type="text/css" href="">
+  <link rel="stylesheet" type="text/css" href="style/settings/settings.css">
+</head>
+<body>
+  <div class="iframe-container active">
+    <div class="settings-container">
+      <button onclick="window.location.href = '/'">Back</button>
+      <div class="setting-option">
+        <label for="colorTheme">Color Theme:</label>
+        <select id="colorThemeSelect" class="custom-select">
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+          <option value="frog">🐸</option>
+        </select>
+      </div>
+
+      <div class="setting-option">
+        <label for="searchEngine">Search Engine:</label>
+        <select id="searchEngine" class="custom-select">
+          <option value="https://google.com">Google</option>
+          <!--<option value="aHR0cHM6Ly9zZWFyeG5nLS1icm93c2Vyb3phYnJhbW8ucmVwbC5jbw==">SearXNG</option>-->
+          <option value="https://search.brave.com">Brave</option>
+          <option value="https://bing.com">Bing</option>
+          <option value="https://archive.org">Internet Archive</option>
+      </select>
+      </div>
+      
+      <div class="settings-option">
+        <center>
+          <button class="saveButton" onclick="window.location.href='search.html'">Search History</button>
+        </center>
+      </div>
+
+      <div class="button-container">
+        <button class="saveButton" onclick="window.localStorage.clear()">Clear Settings</button>
+        <button class="saveButton" id="saveButton">Save Settings</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/settings.js"></script>
+</body>
+</html>
