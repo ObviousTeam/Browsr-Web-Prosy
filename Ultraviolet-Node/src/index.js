@@ -21,6 +21,22 @@ app.use((req, res) => {
   res.sendFile(join(publicPath, "404.html"));
 });
 
+app.post('/thanks', function(req, res) {
+  fs.readFile('../thanks.txt', 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      writedata = Number(data) + 1
+      fs.writeFile('../thanks.txt', writedata, err => {
+      if (err) {
+        console.error(err);
+      }
+      console.log("Thanks successfully loged")
+    });
+  });
+});
+
 const server = createServer();
 
 server.on("request", (req, res) => {
